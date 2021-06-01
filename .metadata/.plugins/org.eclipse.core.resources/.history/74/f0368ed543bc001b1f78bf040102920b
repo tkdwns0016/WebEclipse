@@ -1,0 +1,12 @@
+package jsp07_db.model;
+
+public class MessageDao {
+	
+	//싱글톤 방식으로 객체 생성 할 수 있다.
+	private static MessageDao instance = new MessageDao();
+	private MessageDao () {}
+	public static MessageDao getInstance() {
+		return instance;
+	}
+	
+}

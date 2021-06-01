@@ -1,0 +1,25 @@
+package jsp08_mvc_marvel.Marvel;
+
+public class MarvelDao {
+	private static MarvelDao instance = new MarvelDao();
+	
+	private MarvelDao() {}
+	
+	public MarvelDao getInstance() {
+		return instance;
+	}
+	
+	
+	public void movieInsert(MarvelDto marvelDto) {
+		String sql = "insert into marvel values(?,?,?,?,?,?,?)";
+		
+		try
+	}
+	
+	
+	
+	
+	
+	
+	
+}

@@ -1,0 +1,40 @@
+package jsp08_mvc_ex.LottoController;
+
+import java.io.IOException;
+import java.io.PrintWriter;
+import java.util.ArrayList;
+import java.util.HashSet;
+import java.util.List;
+import java.util.Set;
+
+import javax.servlet.ServletException;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+public class LottoController extends HttpServlet{
+	
+	@Override
+	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+		Set<Integer> lottoSet = new HashSet<Integer>();
+		while(lottoSet.size()<6) {
+		lottoSet.add((int)(Math.random()*45+1));
+		}
+		System.out.println(lottoSet);
+		
+		req.setAttribute("lotto", lottoSet);
+		
+		req.getRequestDispatcher("/lotto.jsp").forward(req, resp);
+	}
+	
+	@Override
+	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+		
+		String[] i = {"1","2","3","4","5","6"};
+		
+		
+		System.out.println(i);
+		req.setAttribute("lotto", i);
+		req.getRequestDispatcher("/lotto.jsp").forward(req, resp);
+	}
+}

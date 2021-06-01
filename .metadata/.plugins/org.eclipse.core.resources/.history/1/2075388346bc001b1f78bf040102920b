@@ -1,0 +1,27 @@
+<%@page import="jsp07_db.db.MysqlConnector"%>
+<%@page import="java.sql.Connection"%>
+<%@page import="java.time.LocalDateTime"%>
+<%@page import="jsp07_db.model.MessageDto"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%>
+<%
+	request.setCharacterEncoding("utf-8");
+%>
+<jsp:useBean id="messageDto" class="jsp07_db.model.MessageDto" scope="page">
+	<jsp:setProperty property="*" name="messageDto" />
+</jsp:useBean>
+<% 
+	messageDto.setWriteDate(LocalDateTime.now());
+
+	Connection conn = MysqlConnector.getConnection();
+%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title></title>
+</head>
+<body>
+
+</body>
+</html>

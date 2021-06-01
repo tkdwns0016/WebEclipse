@@ -1,0 +1,15 @@
+package jsp07_db.db;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+
+public class MysqlConnector {
+	public static Connection getConnection() {
+			Class.forName("com.mysql.cj.jdbc.Driver");
+			String user = "root";
+			String password = "mysql";
+			String url = "jdbc:mysql://localhost:3306/tj_a?serverTimezone=Asia/Seoul&characterEncoding=utf-8";
+			DriverManager.getConnection(url, user, password);
+		
+	}
+}

@@ -1,0 +1,20 @@
+package jsp08_mvc.guestbook.model;
+
+import java.sql.Connection;
+
+import jsp08_mvc.guestbook.db.MyConnector;
+
+public class MessageWriteService {
+	private MessageDao messageDao;
+	
+	public MessageWriteService() {
+		messageDao = MessageDao.getInstance();
+		
+	}
+	
+	public void writeMessage(MessageDto messageDto) {
+		try(Connection conn = MyConnector.getConnection())
+		
+	}
+	
+}

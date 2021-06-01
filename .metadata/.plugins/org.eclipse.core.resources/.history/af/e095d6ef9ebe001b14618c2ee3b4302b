@@ -1,0 +1,23 @@
+package jsp08_mvc.guestbook.model;
+
+import jsp08_mvc.guestbook.db.MyConnector;
+
+import java.sql.Connection;
+
+public class MessageDeleteService {
+
+	private MessageDao messageDao;
+	
+	public MessageDeleteService() {
+		messageDao = MessageDao.getInstance();
+	}
+	
+	public boolean messageDelete(int messageId) {
+		try(Connection conn = MyConnector.getConnection()){
+			messageDao.delete(conn,messageId);
+		}
+	}
+	
+	
+	
+}

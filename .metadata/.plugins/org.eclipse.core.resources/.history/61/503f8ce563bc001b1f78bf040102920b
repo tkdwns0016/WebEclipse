@@ -1,0 +1,22 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>방명록 만들기</title>
+</head>
+<body>
+	<form>
+	<fieldset>
+	<legend>방명록</legend>
+	<input type="text" name="guestName" placeholder="닉네임"><br>
+	<textarea rows="5" cols="30" placeholder="방명록을 작성해 주세요"></textarea>
+	
+	
+	
+	
+	</fieldset>	
+	</form>
+</body>
+</html>

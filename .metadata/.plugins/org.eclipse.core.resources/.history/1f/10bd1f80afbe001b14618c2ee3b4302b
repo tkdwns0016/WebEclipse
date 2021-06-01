@@ -1,0 +1,28 @@
+package jsp08_mvc_marvel.MarvelController;
+
+import java.io.IOException;
+
+import javax.servlet.ServletException;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+import jsp08_mvc_marvel.Marvel.MarvelUpdateService;
+
+public class MarvelUpdateController extends HttpServlet{
+
+	@Override
+	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+		String marvelIdStr = req.getParameter("marvelId");
+		int marvelId = Integer.parseInt(marvelIdStr);
+		
+		MarvelUpdateService service = new MarvelUpdateService();
+		
+		boolean result = service.update(marvelId);
+		
+		req.setAttribute("result", result);
+		
+		req.getRequestDispatcher("/WEB-INF/marvel/updateResult.jsp").forward(req, resp);
+		
+	}
+}

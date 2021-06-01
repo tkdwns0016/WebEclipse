@@ -1,0 +1,19 @@
+<%@page import="jsp07_db.model.MessageDto"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%>
+<%
+	//write.jsp
+	request.setCharacterEncoding("utf-8");
+	MessageDto messageDto = new MessageDto();
+	
+%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title></title>
+</head>
+<body>
+
+</body>
+</html>

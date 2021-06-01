@@ -1,0 +1,8 @@
+1621999680122	Delete elements
+1622000479040	Move package
+1622000503569	Rename package 'jsp08_mvc.guestbook.db'
+1622000513689	Rename package 'jsp08_mvc.marvel.db'
+1622001810900	Move 'marvelWeb.jsp' to 'marvel'
+1622001919087	Move 'web.xml' to 'marvel'
+1622001944460	Move 'web.xml' to 'WEB-INF'
+1622008703925	Rename type 'ShowMarvel'

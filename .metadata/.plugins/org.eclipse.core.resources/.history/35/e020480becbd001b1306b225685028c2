@@ -1,0 +1,26 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+
+<%request.getAttribute(marvel) %>
+	<c:forEach var="marvel" items="marvel">
+		<div>
+		영화 한글 제목 : ${marvel.title }<br>
+		영화 영어 제목 : ${marvel.titleEng }<br>
+		개봉일 : ${marvel.releaseDate }<br>
+		월드 박스 오피스 : ${marvel.worldBoxOffice }<br>
+		작성일 : ${marvel.writeDate }<br>
+		수정일 : ${marvel.updateDate }<br>
+		<hr>
+		</div>
+	</c:forEach>
+	<a href="http://localhost:8080/jsp08_mvc_marvel/marvel">돌아가기</a>
+</body>
+</html>

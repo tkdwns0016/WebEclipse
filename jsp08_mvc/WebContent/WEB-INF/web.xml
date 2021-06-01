@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+	xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd"
+	id="WebApp_ID" version="4.0">
+	<display-name>jsp08_mvc</display-name>
+	<!-- 서블릿을 등록 -->
+	<servlet>
+		<servlet-name>messageController</servlet-name>
+		<servlet-class>jsp08_mvc.guestbook.controller.MessageController</servlet-class>
+	</servlet>
+	<!-- 서블릿 매핑 -->
+	<servlet-mapping>
+		<servlet-name>messageController</servlet-name>
+		<url-pattern>/list</url-pattern>
+	</servlet-mapping>
+	<servlet>
+	<servlet-name>messageUpdateController</servlet-name>
+	<servlet-class>jsp08_mvc.guestbook.controller.MessageUpdateController</servlet-class>
+	</servlet>
+	<servlet-mapping>
+	<servlet-name>messageUpdateController</servlet-name>
+	<url-pattern>/update</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+	<servlet-name>messageDeleteController</servlet-name>
+	<servlet-class>jsp08_mvc.guestbook.controller.MessageDeleteController</servlet-class>
+	</servlet>
+	<servlet-mapping>
+	<servlet-name>messageDeleteController</servlet-name>
+	<url-pattern>/delete</url-pattern>
+	</servlet-mapping>
+</web-app>

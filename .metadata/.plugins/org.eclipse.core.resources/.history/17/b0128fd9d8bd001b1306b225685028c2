@@ -1,0 +1,42 @@
+package jsp08_mvc_marvel.MarvelController;
+
+import java.io.IOException;
+import java.time.LocalDate;
+import java.time.LocalDateTime;
+
+import javax.servlet.ServletException;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+import jsp08_mvc_marvel.Marvel.MarvelDto;
+
+public class MarvelController extends HttpServlet{
+	
+	@Override
+	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+		
+		
+		req.getRequestDispatcher("/WEB-INF/marvel/marvelWeb.jsp").forward(req, resp);
+	}
+	
+	@Override
+	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+		req.setCharacterEncoding("utf-8");
+		
+		int pageNumber=1;
+		if(req.getParameter("pageNumber") != null) {
+			pageNumber = Integer.parseInt(req.getParameter("pageNumber"));
+		}
+		System.out.println(req.getParameter("title"));
+//		MarvelDto marvelDto = new MarvelDto(
+//				(int)req.getAttribute("marvelId"),
+//				(String)req.getAttribute("title"),
+//				(String)req.getAttribute("titleEng"),
+//				(LocalDate)req.getAttribute("releaseDate"),
+//				(Long)req.getAttribute("worldBoxOffice"),
+//				LocalDateTime.now(), LocalDateTime.now());
+		
+	}
+}
+

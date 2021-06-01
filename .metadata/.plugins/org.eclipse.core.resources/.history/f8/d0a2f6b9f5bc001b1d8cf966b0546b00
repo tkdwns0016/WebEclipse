@@ -1,0 +1,18 @@
+package jsp08_mvc.guestbook.model;
+
+import java.time.LocalDateTime;
+
+public class MessageDto {
+	private int messageId;//방명록 아이디
+	private String guestName; //글쓴이
+	private String message;	//내용
+	private LocalDateTime writeDate; //작성일
+	private LocalDateTime updateDate; //수정일
+	
+
+	public MessageDto () {}
+	
+	
+	
+	
+}

@@ -1,0 +1,10 @@
+package jsp07_db.model;
+
+public class MessageDao {
+	//인스턴트 만들어주기
+private static MessageDao instance = new MessageDao();
+	
+//객체 생성 막기
+private MessageDao() {}
+
+}

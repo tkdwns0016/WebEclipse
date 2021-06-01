@@ -1,0 +1,72 @@
+<%@page import="java.util.HashMap"%>
+<%@page import="java.util.Map"%>
+<%@page import="java.time.LocalDate"%>
+<%@page import="marvel.Movie"%>
+<%@page import="java.util.List"%>
+<%@page import="java.util.ArrayList"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%>
+<jsp:useBean id="marble" class="ex01.MarbleMovie" scope="session">
+	<jsp:setProperty property="*" name="marble" />
+</jsp:useBean>
+<%
+	request.setCharacterEncoding("utf-8");
+
+	Map<String, String> myError = new HashMap<>();
+
+	String title = request.getParameter("title").trim();
+	String titleEng = request.getParameter("titleEng").trim();
+	String boxOfficeParam = request.getParameter("boxOffice").trim();
+	String releaseDateParam = request.getParameter("releaseDate").trim();
+	//title이 빈 값인가?
+	if (title.equals("")) {
+		myError.put("title", "제목이 비어있습니다.");
+	}
+	//titleEng가 빈 값인가?
+	if (titleEng.equals("")) {
+		myError.put("titleEng", "영어 제목이 비어있습니다.");
+	}
+	//boxOffice가 빈 값인가?
+	if (boxOfficeParam.equals("")) {
+		myError.put("boxOffice", "박스 오피스가 비어있습니다.");
+	}
+	//releaseDate가 빈 값인가?
+	if (releaseDateParam.equals("")) {
+		myError.put("releaseDate", "개봉일이 비어있습니다.");
+	}
+
+	if (myError.size() > 0) {
+		request.setAttribute("myError", myError);
+		request.getRequestDispatcher("input.jsp").forward(request, response);
+	}
+
+	List<Movie> movieList = new ArrayList<Movie>();
+	Movie movie = new Movie(
+			title,
+			titleEng,
+			Long.parseLong(boxOfficeParam),
+			LocalDate.parse(releaseDateParam));
+
+	Long boxOffice;
+	if (boxOfficeParam == null || boxOfficeParam.equals("")) {
+		boxOffice = Long.parseLong(boxOfficeParam.trim());
+	}
+	LocalDate releaseDate = LocalDate.parse(request.getParameter("releaseDate"));
+%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>process.jsp</title>
+</head>
+<body>
+	<h1>담기 완료!</h1>
+	<hr>
+	<form action="input.jsp">
+		<input type="submit" value="돌아가기">
+	</form>
+	<form action="show.jsp">
+		<input type="submit" value="결과보기">
+	</form>
+</body>
+</html>

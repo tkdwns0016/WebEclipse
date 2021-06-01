@@ -1,0 +1,40 @@
+package jsp08_mvc.guestbook.controller;
+
+import java.io.IOException;
+import java.io.PrintWriter;
+
+import javax.servlet.ServletException;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+//서블릿으로 등록할 클래스
+public class MessageController extends HttpServlet{
+	//서블릿을 이용해서 컨트롤러 역할을 하는 클래스 구현
+	//서블릿에는 주로 사용하는 메서드가 있음
+	//doGet, doPost, service
+	//doGet은 get으로 요청이 왔을 때 실행
+	//doPost는 post로 요청이 왔을 때 실행
+	//service는 get이든 post든 실행됨
+	
+	@Override
+	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+		System.out.println("두 겟 호출");
+//		PrintWriter out = resp.getWriter();
+//		out.write("hello do get");
+		
+		//화면으로 이동.
+		req.getRequestDispatcher("/view.jsp").forward(req, resp);
+	}
+	
+	@Override
+	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+		System.out.println("두 포스트 호출");
+		PrintWriter out = resp.getWriter();
+		out.write("hello do post");
+	}
+	
+	
+	
+	
+}

@@ -1,0 +1,24 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%>
+	<jsp:useBean id="messageDto" class="jsp07_db.model.MessageDto" scope="page">
+	<jsp:setProperty property="*" name="messageDto" />
+</jsp:useBean>
+<%
+	request.setCharacterEncoding("utf-8");
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+%>

@@ -1,0 +1,27 @@
+<%@page import="jsp07_db.model.MessageDto01"%>
+<%@page import="jsp07_db.model.MessageDao"%>
+<%@page import="jsp07_db.db.MyConnector"%>
+<%@page import="java.sql.Connection"%>
+<%@page import="java.time.LocalDateTime"%>
+<%@page import="java.sql.Timestamp"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%>
+
+<%
+	request.setCharacterEncoding("utf-8");
+%>
+<jsp:useBean id="messageDto" class="jsp07_db.model.MessageDto01"
+	scope="page">
+	<jsp:setProperty property="*" name="messageDto" />
+</jsp:useBean>
+<%
+	messageDto.setWriteDate(Timestamp.valueOf(LocalDateTime.now()));
+
+	try (Connection conn = MyConnector.getConnection()) {
+		MessageDao messageDao = MessageDao.getInstance();
+		messageDao.insert(conn, messageDto);
+	}catch(Exception e){
+		e.printStackTrace();
+	}
+	response.sendRedirect("message.jsp");
+%>

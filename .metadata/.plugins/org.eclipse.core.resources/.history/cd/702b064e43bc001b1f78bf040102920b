@@ -1,0 +1,17 @@
+package jsp07_db.db;
+
+import java.sql.Connection;
+
+public class MysqlConnector {
+	public static Connection getConnection() {
+		try {
+			Class.forName("com.mysql.cj.jdbc.Driver");
+			String user = "root";
+			String password = "mysql";
+			String url = "jdbc:mysql://localhost:3306/tj_a?serverTimezone=Asia/Seoul&characterEncoding=utf-8";
+		} catch (ClassNotFoundException e) {
+			e.printStackTrace();
+		}
+		
+	}
+}

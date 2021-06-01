@@ -1,0 +1,27 @@
+package jsp08_mvc_marvel.MarvelController;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import javax.servlet.http.HttpServlet;
+
+import jsp08_mvc_marvel.Marvel.MarvelDao;
+import jsp08_mvc_marvel.Marvel.MarvelDto;
+
+public class ShowMarvelController extends HttpServlet{
+	protected void doGet(javax.servlet.http.HttpServletRequest req, javax.servlet.http.HttpServletResponse resp) throws javax.servlet.ServletException ,java.io.IOException {
+		System.out.println("하이");
+		List<MarvelDto> marvelList = new ArrayList<MarvelDto>();
+		
+		int pageNumber=1;
+		if(req.getParameter("pageNumber") != null) {
+			pageNumber = Integer.parseInt(req.getParameter("pageNumber"));
+		}
+		int firstRow = (pageNumber-1) * 5;
+		marvelList = MarvelDao.getInstance().getMarvelList(firstRow);
+
+		req.setAttribute("marvel", marvelList);
+		req.getRequestDispatcher("/WEB-INF/marvel/showAllMarvel.jsp").forward(req, resp);
+		
+	};
+}

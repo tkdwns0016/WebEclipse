@@ -1,0 +1,15 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%>
+<%
+	//어떤 방명록을 수정할 지 알아야함.
+%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>수정</title>
+</head>
+<body>
+	<form></form>
+</body>
+</html>

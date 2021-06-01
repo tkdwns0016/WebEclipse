@@ -1,0 +1,6 @@
+package jsp08_mvc.guestbook.controller;
+
+//서블릿으로 등록할 클래스
+public class MessageController {
+
+}

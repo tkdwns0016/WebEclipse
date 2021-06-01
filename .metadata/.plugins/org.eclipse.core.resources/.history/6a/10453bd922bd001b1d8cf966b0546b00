@@ -1,0 +1,7 @@
+package jsp08_mvc.guestbook.model;
+
+//리스트 화면에 필요한 데이터를 만들어주는
+//비지니스 로직을 처리하는 놈
+public class MessageListService {
+
+}

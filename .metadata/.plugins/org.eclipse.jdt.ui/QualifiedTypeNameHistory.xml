@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+    <fullyQualifiedTypeName name="java.util.Collection"/>
+    <fullyQualifiedTypeName name="ex01.MarbleMovie"/>
+    <fullyQualifiedTypeName name="java.util.Map"/>
+    <fullyQualifiedTypeName name="java.util.HashMap"/>
+    <fullyQualifiedTypeName name="jsp08_mvc.guestbook.controller.MessageController"/>
+    <fullyQualifiedTypeName name="javax.security.auth.message.callback.PrivateKeyCallback.Request"/>
+    <fullyQualifiedTypeName name="java.io.PrintWriter"/>
+    <fullyQualifiedTypeName name="java.util.Set"/>
+    <fullyQualifiedTypeName name="java.util.HashSet"/>
+    <fullyQualifiedTypeName name="java.lang.Math"/>
+    <fullyQualifiedTypeName name="com.mysql.cj.xdevapi.Statement"/>
+    <fullyQualifiedTypeName name="java.sql.Statement"/>
+    <fullyQualifiedTypeName name="java.util.ArrayList"/>
+    <fullyQualifiedTypeName name="java.util.List"/>
+    <fullyQualifiedTypeName name="jsp08_mvc.guestbook.model.MessageListService"/>
+    <fullyQualifiedTypeName name="jsp08_mvc.guestbook.model.MessageListView"/>
+    <fullyQualifiedTypeName name="jsp08_mvc.guestbook.model.MessageDao"/>
+    <fullyQualifiedTypeName name="jsp08_mvc.guestbook.model.MessageSelectService"/>
+    <fullyQualifiedTypeName name="jsp08_mvc.guestbook.model.MessageDto"/>
+    <fullyQualifiedTypeName name="jsp08_mvc.guestbook.controller.MessageUpdateController"/>
+    <fullyQualifiedTypeName name="sun.security.mscapi.CKeyStore.MY"/>
+    <fullyQualifiedTypeName name="jsp08_mvc.guestbook.model.MessageUpdateService"/>
+    <fullyQualifiedTypeName name="java.lang.Integer"/>
+    <fullyQualifiedTypeName name="jsp08_mvc.guestbook.db.MyConnector"/>
+    <fullyQualifiedTypeName name="java.sql.SQLException"/>
+    <fullyQualifiedTypeName name="java.lang.ClassCastException"/>
+    <fullyQualifiedTypeName name="jsp08_mvc.guestbook.model.MessageDeleteService"/>
+    <fullyQualifiedTypeName name="jsp08_mvc_marvel.Marvel.MarvelUpdateService"/>
+    <fullyQualifiedTypeName name="java.time.LocalDate"/>
+    <fullyQualifiedTypeName name="java.sql.Date"/>
+    <fullyQualifiedTypeName name="java.time.LocalDateTime"/>
+    <fullyQualifiedTypeName name="java.sql.Timestamp"/>
+    <fullyQualifiedTypeName name="java.sql.ResultSet"/>
+    <fullyQualifiedTypeName name="javax.servlet.http.HttpServlet"/>
+    <fullyQualifiedTypeName name="jsp08_mvc_marvel.Marvel.MarvelDto"/>
+    <fullyQualifiedTypeName name="jsp08_mvc_marvel.Marvel.MarvelDao"/>
+    <fullyQualifiedTypeName name="java.sql.Connection"/>
+    <fullyQualifiedTypeName name="jsp08_mvc_marvel.db.MyConnector"/>
+    <fullyQualifiedTypeName name="java.sql.PreparedStatement"/>
+    <fullyQualifiedTypeName name="jsp08_mvc_marvel.Marvel.MarvelDeleteService"/>
+</qualifiedTypeNameHistroy>

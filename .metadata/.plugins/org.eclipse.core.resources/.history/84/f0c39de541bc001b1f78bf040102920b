@@ -1,0 +1,10 @@
+package jsp07_db.model;
+
+import java.time.LocalDateTime;
+
+public class MessageDto {
+	private int messageId;
+	private String guestName;
+	private String message;
+	private LocalDateTime writeDate
+}

@@ -1,0 +1,20 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%>
+<%
+	//어떤 방명록을 수정할 지 알아야함.
+	int messageId = Integer.parseInt(request.getParameter("messageId"));
+	
+	//id에 해당하는 방명록 데이타를 가져온다.
+	//form화면에 뿌려준다.
+	
+%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>수정</title>
+</head>
+<body>
+	<form></form>
+</body>
+</html>

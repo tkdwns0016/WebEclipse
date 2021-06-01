@@ -1,0 +1,16 @@
+package jsp08_mvc.guestbook.controller;
+
+import javax.servlet.http.HttpServlet;
+
+//서블릿으로 등록할 클래스
+public class MessageController extends HttpServlet{
+	//서블릿을 이용해서 컨트롤러 역할을 하는 클래스 구현
+	//서블릿에는 주로 사용하는 메서드가 있음
+	//doGet, doPost, service
+	//doGet은 get으로 요청이 왔을 때 실행
+	//doPost는 post로 요청이 왔을 때 실행
+	//service는 get이든 post든 실행됨
+	
+	
+	
+}

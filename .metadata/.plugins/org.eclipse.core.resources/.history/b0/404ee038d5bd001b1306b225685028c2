@@ -1,0 +1,47 @@
+package jsp08_mvc_marvel.Marvel;
+
+import java.sql.Date;
+import java.sql.PreparedStatement;
+import java.sql.SQLException;
+import java.sql.Timestamp;
+
+import jsp08_mvc_marvel.db.MyConnector;
+
+public class MarvelDao {
+	private static MarvelDao instance = new MarvelDao();
+	
+	private MarvelDao() {}
+	
+	public MarvelDao getInstance() {
+		return instance;
+	}
+	
+	
+	public void movieInsert(MarvelDto marvelDto) {
+		String sql = "insert into marvel values(?,?,?,?,?,?,?)";
+		
+		try(PreparedStatement pst = MyConnector.getConnection().prepareStatement(sql)){
+			pst.setInt(1, marvelDto.getmarvelId());
+			pst.setString(2, marvelDto.getTitle());
+			pst.setString(3, marvelDto.getTitleEng());
+			pst.setDate(4, Date.valueOf(marvelDto.getReleaseDate()));
+			pst.setLong(5, marvelDto.getWorldBoxOffice());
+			pst.setTimestamp(6, Timestamp.valueOf(marvelDto.getWriteDate()));
+			pst.setTimestamp(7, Timestamp.valueOf(marvelDto.getUpdateDate()));
+			
+			
+			
+		} catch (ClassNotFoundException e) {
+			e.printStackTrace();
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+	}
+	
+	
+	
+	
+	
+	
+	
+}

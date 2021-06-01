@@ -1,0 +1,5 @@
+package jsp08_mvc_marvel.Marvel;
+
+public class MarvelDeleteService {
+
+}

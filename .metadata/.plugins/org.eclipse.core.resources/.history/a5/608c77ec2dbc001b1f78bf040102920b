@@ -1,0 +1,15 @@
+package marvel;
+
+import java.time.LocalDate;
+
+public class Movie {
+	private String title;
+	private String titleEng;
+	private Long boxOffice;
+	private LocalDate releaseDate;
+	
+	
+	
+	
+	
+}

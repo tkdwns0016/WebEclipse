@@ -1,0 +1,36 @@
+package jsp08_mvc.guestbook.model;
+
+import java.sql.Connection;
+
+public class MessageDao {
+	//싱글톤으로 객체 생성
+	private static MessageDao instance = new MessageDao();
+	private MessageDao() {}
+	public static MessageDao getInstance() {
+		return instance;
+	}
+	
+	//전체 개수를 가져오는 메서드
+	public int selectTotalCount(Connection conn) {
+		String sql = "select count(*) from geustbook" ;
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		return null;
+			
+	}
+	
+	
+	
+	
+}

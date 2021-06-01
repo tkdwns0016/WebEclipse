@@ -1,0 +1,16 @@
+package jsp08_mvc_marvel.Marvel;
+
+import java.time.LocalDate;
+import java.time.LocalDateTime;
+
+public class MarvelDto {
+	private int marvel_id;
+	private String title;
+	private String titleEng;
+	private LocalDate releaseDate;
+	private Long worldBoxOffice;
+	private LocalDateTime writeDate;
+	private LocalDateTime updateDate;
+	
+	
+}

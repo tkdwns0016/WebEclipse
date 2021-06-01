@@ -1,0 +1,13 @@
+package jsp08_mvc_marvel.MarvelController;
+
+import javax.servlet.http.HttpServlet;
+
+public class ShowMarvel extends HttpServlet{
+	protected void doGet(javax.servlet.http.HttpServletRequest req, javax.servlet.http.HttpServletResponse resp) throws javax.servlet.ServletException ,java.io.IOException {
+		
+		
+		
+		req.getRequestDispatcher("/WEB-INF/marvel/showAllMarvel.jsp)
+		
+	};
+}

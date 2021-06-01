@@ -1,0 +1,9 @@
+package jsp08_mvc_marvel.Marvel;
+
+public class MarvelDeleteService {
+	private MarvelDao marvelDao;
+	
+	public MarvelDeleteService() {
+		marvelDao = MarvelDao.getInstance();
+	}
+}

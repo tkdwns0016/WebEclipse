@@ -1,0 +1,15 @@
+package jsp08_mvc.guestbook.model;
+
+public class MessageWriteService {
+	private MessageDao messageDao;
+	
+	public MessageWriteService() {
+		messageDao = MessageDao.getInstance();
+		
+	}
+	
+	public void writeMessage(MessageDto messageDto) {
+		
+	}
+	
+}

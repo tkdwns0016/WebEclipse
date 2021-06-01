@@ -1,0 +1,5 @@
+package jsp08_mvc.guestbook.controller;
+
+public class MessageUpdateController {
+
+}

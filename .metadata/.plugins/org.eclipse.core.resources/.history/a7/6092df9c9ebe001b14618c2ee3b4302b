@@ -1,0 +1,7 @@
+package jsp08_mvc.guestbook.model;
+
+public class Snippet {
+	public static void main(String[] args) {
+		MessageDeleteService	}
+}
+

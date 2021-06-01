@@ -1,0 +1,6 @@
+package jsp08_mvc.guestbook.model;
+
+//방명록 화면을 보여주기 위해 필요한 데이타를 담는 아이
+public class MessageListView {
+
+}

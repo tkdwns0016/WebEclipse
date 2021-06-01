@@ -1,0 +1,11 @@
+package jsp08_mvc_marvel.MarvelController;
+
+import jsp08_mvc_marvel.Marvel.MarvelDao;
+
+public class MarveldeleteController {
+	private MarvelDao marvelDao;
+	
+	public MarveldeleteController() {
+		marvelDao = MarvelDao.getInstance();
+	}
+}
